@@ -1,0 +1,13 @@
+# Archivos y directorios a ignorar
+.env
+vendor/
+node_modules/
+storage/logs/*.log
+storage/cache/
+storage/sessions/*
+!storage/sessions/.gitkeep
+public/uploads/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

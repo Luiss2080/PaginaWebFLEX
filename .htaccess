@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Si se accede a la raíz, redirigir al index.php de public
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ public/index.php [L]
+
+# Para todas las demás rutas, redirigir a public manteniendo la ruta
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ public/index.php [QSA,L]
